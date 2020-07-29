@@ -1,38 +1,160 @@
-.App {
+.App{
   text-align: center;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.faicons {
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.light-mode{
+  background-color: white;
+  color: black;
+  height: 100%;
+}
+
+.dark-mode{
+  background-color: #1a1919;
+  color: whitesmoke;
+  height: 100%;
+}
+
+.App hr{
+  height: 0.2px;
+  background-color: black;
+  border-color: transparent;
+  box-shadow:0 1.5px 4px rgba(0, 0, 0, 1), 0 0 40px rgba(0, 0, 0, 0.2) inset;
+}
+
+.head{
+  font-weight: bolder;
+  font-size: 35px;
+  font-family: Calibri;
+  display: inline-flex;
+}
+
+.head p{
+  margin: 0
+}
+
+.theme {
+  display: inline-flex;
+  right: 20px;
+}
+
+.toggle-container{
+  right: 40px;
+  position: absolute;
+  top: 1%
+}
+
+.teamName form{
+  display: inline-flex;
+  margin: 30px 50px;
+  min-width: 225px;
+  max-width: 225px;
+}
+
+.teamName input{
+  height: 50px;
+  width: 200px;
+  font-size: 40px;
+  font-family: Calibri;
+  border-color: transparent;
+}
+
+::placeholder{
+  color: black;
+}
+
+.teamName input:focus{
+  outline: none;
+}
+
+.teamName span{
+  margin: 2px
+}
+
+.teamName span :hover{
+  cursor: pointer;
+  color: lightblue;
+}
+
+.scoreHolder{
+  display: inline-flex;
+}
+
+.score div{
+  margin-bottom: 20px;
+  margin: 0 15px
+}
+
+.score p{
+  font-size: 10em;
+  min-width: 300px;
+  max-width: 300px;
+  font-family: Calibri;
+  margin: 0px;
+  user-select: none;
+}
+
+.score input{
+  height: 40px;
+  width: 70px;
+  margin: 5px;
+  border-radius: 5px;
+  border-color: transparent;
+  background-color: lightgray;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+@media only screen and (min-width: 850px) {
+  .teamName form{
+    margin: 30px 100px;
+    min-width: 225px;
+    max-width: 225px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .score div{
+    margin-bottom: 20px;
+    margin: 0 60px
   }
-  to {
-    transform: rotate(360deg);
+  
+  .score p{
+    font-size: 15vw;
+  }
+
+}
+
+@media only screen and (max-width: 649px) {
+  .teamName form{
+    margin: 20px 20px;
+    min-width: 200px;
+    max-width: 200px;
+  }
+
+  .teamName input{
+    height: 50px;
+    width: 150px;
+    font-size: 30px;
+  }
+
+  .teamName span{
+    margin: 0px
+  }
+
+  .score div{
+    margin: 20px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  
+  .score p{
+    font-size: 20vw;
+    min-width: 200px;
+    max-width: 200px;
   }
 }
